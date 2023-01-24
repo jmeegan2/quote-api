@@ -13,6 +13,11 @@
    
     
 }
+.refresh {
+    text-align: center;
+
+   background-color: white;
+}
 
 
 p {
@@ -25,7 +30,7 @@ img {
 }
 body {
     background-color: skyblue;
-    background-image: url('kanyeGIf.gif');
+    /* background-image: url('kanyeGIf.gif'); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
