@@ -1,8 +1,7 @@
 #Summary
 
-This is an API that displays Kayne West quotes
-Not formatted for Mobile right now 1/31/22
+This is an API that displays random Quotes
 
 #Deployed Link
 
-https://affectionate-pare-577350.netlify.app
+https://unrivaled-dusk-8cd329.netlify.app/
