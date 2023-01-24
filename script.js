@@ -1,40 +1,34 @@
 
-//     fetch('https://api.kanye.rest')
-//   .then(response => response.json())
-//   .then(data => {
-//     console.log(data)
-//     displayQuote(data)
-//   });
 
 
-//   function displayQuote(data) {
-//     const quote = data.quote;
-//     const quoteDiv = document.getElementById("quote");
+
+
+  fetch("https://type.fit/api/quotes")
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+    const randomIndex = Math.floor(Math.random() * data.length);
+    const randomQuote = data[randomIndex];
+    console.log(randomQuote);
+    displayText(randomQuote)
+  });
+
+  // function displayText(randomQuote){
+  //   const text = randomQuote.text;
+  //   const textDiv = document.getElementById("quote")
+
+  //   const textName = '"'+text+'"'
+  //   const headingNew = document.createElement("p")
+
+  //   headingNew.innerHTML = textName;
+  //   textDiv.appendChild(headingNew)
+  // }
+
+  function displayText(randomQuote){
+    const textDiv = document.getElementById("quote")
+    const headingNew = document.createElement("p")
+    headingNew.innerHTML = randomQuote.text;
+    textDiv.appendChild(headingNew)
+  }
   
-
-//   const quoteName = '"'+quote+'"';
-//   const heading = document.createElement("p");
-
-//   heading.innerHTML = quoteName;
-//   quoteDiv.appendChild(heading);
-//   }
-// //   document.getElementById('data').innerHTML
-
- 
-
-// fetch('https://zenquotes.io/api/quotes/')
-// .then(response => response.json())
-// .then(data => {
-//   console.log(data)
-//   displayQuote(data)
-// });
-
-var requestOptions = {
-  method: 'GET',
-  redirect: 'follow'
-};
-
-fetch("https://zenquotes.io/api/quotes/", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
